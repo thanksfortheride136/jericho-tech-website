@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jericho Technology Program</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer>
+    // mobile menu + year
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".menu-toggle");
+      const links  = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        const open = links.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open);
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</head>
+<body>
+
+  <!-- FULL-WIDTH NAV: brand hard left, links hard right -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="#home" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
+          <li><a href="#atlas">ATLAS</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#software">Software</a></li>
+          <li><a href="#svgeditor">SVG Editor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FULL-BLEED VIDEO -->
+  <main id="home">
+    <section class="hero full-bleed">
+      <div class="video-frame">
+        <!-- replace video.mp4/poster.jpg with your files -->
+        <video src="video.mp4" autoplay loop muted playsinline poster="poster.jpg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- CONTENT BELOW VIDEO, READER-FRIENDLY WIDTH -->
+    <section class="intro container">
+      <h1>Jericho Technology Program</h1>
+      <p>
+        At Jericho UFSD, students explore engineering, computer science, and design
+        through hands-on projects. From laser-cut instruments and 3D-printed prototypes
+        to coding, electronics, and iterative product design, our courses emphasize
+        creativity, problem-solving, and real-world technical skills in an inclusive,
+        high-energy lab environment.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+
+</body>
+</html>
