@@ -14,7 +14,7 @@
       <a class="brand" href="index.html">
         <span class="brand-line1">Jericho</span><span class="brand-line2">Technology</span>
       </a>
-      <button class="menu-toggle" aria-expanded="false">☰</button>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -36,10 +36,10 @@
 
     <section class="course-split">
       <div class="course-media">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop" alt="">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop" alt="Robotics 3 overview image">
         <div class="action-row">
-          <a class="btn" href="files/robotics3-syllabus.pdf" target="_blank">Syllabus</a>
-          <a class="btn" href="files/robotics3-supplies.pdf" target="_blank">Supplies</a>
+          <a class="btn" href="files/robotics3-syllabus.pdf" target="_blank" rel="noopener">Syllabus</a>
+          <a class="btn" href="files/robotics3-supplies.pdf" target="_blank" rel="noopener">Supplies</a>
         </div>
       </div>
 
@@ -68,19 +68,59 @@
       <div class="gallery-head">
         <h2>Projects</h2>
       </div>
-      <div class="scroller">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1553028826-ccdfc006d9b5?q=80&w=800&auto=format&fit=crop" alt="">
-          <figcaption>Laser-cut chassis</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="">
-          <figcaption>Linkage prototype</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1581091215367-59ab6dcef1b1?q=80&w=800&auto=format&fit=crop" alt="">
-          <figcaption>3D print iteration</figcaption>
-        </figure>
+
+      <!-- Side-arrow layout -->
+      <div class="scroller-wrap">
+        <button class="gallery-arrow left" id="prevBtn" aria-label="Previous project">←</button>
+
+        <div class="scroller" id="scroller">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Linkage prototype">
+            <figcaption>Linkage prototype</figcaption>
+          </figure>
+        </div>
+
+        <button class="gallery-arrow right" id="nextBtn" aria-label="Next project">→</button>
+
+        <!-- optional edge fades -->
+        <div class="edge-fade left-fade" aria-hidden="true"></div>
+        <div class="edge-fade right-fade" aria-hidden="true"></div>
       </div>
     </section>
   </main>
@@ -91,18 +131,15 @@
     </div>
   </footer>
 
-  <script>
-    // reuse footer year + menu toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-      const t = document.querySelector('.menu-toggle');
-      const l = document.querySelector('.nav-links');
-      t?.addEventListener('click', () => {
-        const o = l.classList.toggle('open');
-        t.setAttribute('aria-expanded', o);
-      });
-    });
-  </script>
+  <!-- Lightbox (click-to-enlarge) -->
+  <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" alt="">
+      <div class="lightbox-caption" id="lightboxCap"></div>
+    </div>
+  </div>
+
+  <script defer src="course-page.js"></script>
 </body>
 </html>
