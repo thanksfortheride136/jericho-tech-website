@@ -24,6 +24,63 @@ const COURSES = [
   { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
+    { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
+
   // add more…
 ];
 
