@@ -27,67 +27,35 @@ const COURSES = [
   { title: "Video Production 8", cat: "research", img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop",
     text: "Embedded systems with Arduino: sensors, data logging, automation, and product prototypes." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "MS Research: Engineering", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
   { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Design & Drawing for Production (DDP)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Introduction to Engineering Design (IED)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Computer Integrated Manufacturing (CIM)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Principles of Engineering (POE)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Civil Engineering & Architecture (CEA)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Robotics (HS)", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Video Production", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
 
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+  { title: "Advanced Video Production", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  { title: "MS Research: Ukulele Sound Lab", cat: "research", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments." },
-
-  // add more…
 ];
 
 // ----- Rendering / Filtering / Paging -----
