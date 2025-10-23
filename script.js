@@ -11,3 +11,5 @@ if (toggle && links) {
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+//test
