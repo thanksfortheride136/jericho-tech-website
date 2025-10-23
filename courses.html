@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses • Jericho Technology</title>
+
+  <!-- reuse your global site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- page-specific styles -->
+  <link rel="stylesheet" href="courses.css" />
+
+  <script defer src="courses.js"></script>
+</head>
+<body>
+  <!-- NAV (same layout as home) -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="courses.html">Courses</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
+          <li><a href="#atlas">ATLAS</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#software">Software</a></li>
+          <li><a href="#svgeditor">SVG Editor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page hero -->
+    <section class="container courses-hero">
+      <h1>Technology Courses</h1>
+      <p class="lede">A modern, hands-on program across engineering, computer science, and design.</p>
+    </section>
+
+    <!-- Simple responsive grid -->
+    <section class="container grid">
+      <!-- duplicate a card for each course and swap the image/title/text -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Students assembling a prototype in the lab">
+        <div class="card-body">
+          <h3>Robotics 3</h3>
+          <p>Design process, rapid prototyping, CAD fundamentals, laser cutting, and 3D printing.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Mechanical parts and tools on a workbench">
+        <div class="card-body">
+          <h3>Robotics 4</h3>
+          <p>Mechanisms, materials, and product development. Team capstone prototype & showcase.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Laptop with code editor open">
+        <div class="card-body">
+          <h3>Robotics 5</h3>
+          <p>Computational thinking, data & the Internet, plus a creative programming project.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Student typing on keyboard with code displayed">
+        <div class="card-body">
+          <h3>Technology 6</h3>
+          <p>Foundations of coding with Python & JavaScript: variables, logic, functions, and mini-apps.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Students using a laser cutter">
+        <div class="card-body">
+          <h3>Technology 7</h3>
+          <p>Maker skills, safety, and design challenges using hand tools, laser cutters, and 3D printers.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="3D printers in a fabrication lab">
+        <div class="card-body">
+          <h3>Technology 8</h3>
+          <p>Parametric CAD, slicing, CAM workflows, and rapid iteration with 3D printers & laser cutters.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Arduino board with sensors attached">
+        <div class="card-body">
+          <h3>Middle School Research: Engineering</h3>
+          <p>Embedded systems with Arduino: sensors, data logging, automation, and product prototypes.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Arduino board with sensors attached">
+        <div class="card-body">
+          <h3>Middle School Research: Ukulele Sound Lab</h3>
+          <p>Embedded systems with Arduino: sensors, data logging, automation, and product prototypes.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+</body>
+</html>
