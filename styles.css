@@ -168,7 +168,7 @@ main {
    Intro Text
 ============================ */
 .intro {
-  padding: 3.4rem 0 2.2rem;
+  padding: 3.0rem 0 2.2rem;
   text-align: center;             /* centers the text */
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ main {
    Footer (Sticky)
 ============================ */
 .site-footer {
-  background: #fff;
+  background: #e6e6e6;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   color: var(--muted);
   text-align: center;
@@ -234,3 +234,4 @@ main {
     height: 50px;
   }
 }
+.card-link { text-decoration: none; color: inherit; }

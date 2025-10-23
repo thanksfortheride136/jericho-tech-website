@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jericho Technology Program</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer>
+  <link rel="preload" as="video" href="banner1.MOV">
+  <link rel="preload" as="video" href="banner2.MOV">
+  <link rel="preload" as="video" href="banner3.MOV">
+
+  <script src="script.js" defer>
     // mobile menu + year
     document.addEventListener("DOMContentLoaded", () => {
       const toggle = document.querySelector(".menu-toggle");
@@ -48,11 +52,10 @@
   <main id="home">
     <section class="hero full-bleed">
       <div class="video-frame">
-        <!-- replace video.mp4/poster.jpg with your files -->
-        <video src="test.MOV" autoplay loop muted playsinline poster="poster.jpg">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+  <video id="heroVideo" muted autoplay playsinline poster="poster.jpg">
+    Your browser does not support the video tag.
+  </video>
+</div>
     </section>
 
     <!-- CONTENT BELOW VIDEO, READER-FRIENDLY WIDTH -->
