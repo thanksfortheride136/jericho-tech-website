@@ -186,7 +186,7 @@ function filteredData() {
 // Create clickable cards
 function cardHTML(c) {
   return `
-    <a class="card card-link" href="course.html?slug=${c.slug}" aria-label="${c.title}">
+    <a class="card card-link" href="${c.slug}.html" aria-label="${c.title}">
       <img src="${c.img}" alt="">
       <div class="card-body">
         <h3>${c.title}</h3>
@@ -195,6 +195,7 @@ function cardHTML(c) {
     </a>
   `;
 }
+
 
 // Render visible courses
 function render() {
