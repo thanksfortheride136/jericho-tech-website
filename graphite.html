@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Graphite Editor • Jericho Technology Program</title>
+
+  <!-- Reuse site CSS/JS -->
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
+  <style>
+    html, body { height:100%; margin:0; overflow:hidden; display:flex; flex-direction:column; }
+    main { flex:1 1 auto; display:flex; }
+    #graphite { flex:1 1 auto; width:100vw; height:100%; border:0; display:block; }
+  </style>
+</head>
+<body>
+  <!-- Your exact navbar -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html#home" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="svg-editor.html">SVG Editor (SVGEdit)</a></li>
+          <li><a href="graphite.html" class="active">SVG Editor (Graphite)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Self-hosted Graphite build -->
+    <iframe id="graphite" src="vendor/graphite/index.html"></iframe>
+  </main>
+
+  <script>
+    // Fit the iframe under the navbar—no outer scrollbars
+    const header = document.querySelector('.site-header');
+    const f = document.getElementById('graphite');
+    const size = () => f.style.height = (innerHeight - (header?.offsetHeight||0)) + 'px';
+    size(); addEventListener('resize', size);
+  </script>
+</body>
+</html>
