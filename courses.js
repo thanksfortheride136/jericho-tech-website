@@ -5,21 +5,21 @@ const COURSES = [
   { 
     title: "Robotics 3", 
     cat: ["robot"], 
-    img: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/edison.png",
     text: "Design process, rapid prototyping, CAD fundamentals, laser cutting, and 3D printing."
   },
 
   { 
     title: "Robotics 4", 
     cat: ["robot"], 
-    img: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/spike.png",
     text: "Mechanisms, materials, and product development. Team capstone prototype & showcase."
   },
 
   { 
     title: "Robotics 5", 
     cat: ["robot"], 
-    img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/spike2.jpg",
     text: "Computational thinking, data & the Internet, plus a creative programming project."
   },
 
@@ -68,21 +68,21 @@ const COURSES = [
   { 
     title: "MS Research: Engineering", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/trebuchet.jpg",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments."
   },
 
   { 
     title: "MS Research: Ukulele Sound Lab", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/uke.jpg",
     text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments."
   },
 
   { 
     title: "Video Game Development", 
     cat: ["comp"], 
-    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/unity.png",
     text: "Game loops, sprites, and level design — create and publish a playable project."
   },
 

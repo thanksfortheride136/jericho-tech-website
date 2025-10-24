@@ -5,22 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jericho Technology Program</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preload" as="video" href="banner1.MOV">
-  <link rel="preload" as="video" href="banner2.MOV">
-  <link rel="preload" as="video" href="banner3.MOV">
+  <link rel="preload" as="video" href="videos/banner1.MOV">
+  <link rel="preload" as="video" href="videos/banner2.MOV">
+  <link rel="preload" as="video" href="videos/banner3.MOV">
 
-  <script src="script.js" defer>
-    // mobile menu + year
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const links  = document.querySelector(".nav-links");
-      toggle.addEventListener("click", () => {
-        const open = links.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", open);
-      });
-      document.getElementById("year").textContent = new Date().getFullYear();
-    });
-  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -42,7 +31,7 @@
           <li><a href="#atlas">ATLAS</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#software">Software</a></li>
-          <li><a href="#svgeditor">SVG Editor</a></li>
+          <li><a href="svg-editor.html">SVG Editor</a></li>
         </ul>
       </nav>
     </div>
@@ -76,6 +65,5 @@
       <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
     </div>
   </footer>
-
 </body>
 </html>
