@@ -19,7 +19,7 @@
   <!-- Your exact navbar -->
   <header class="site-header">
     <div class="nav-bar">
-      <a class="brand" href="index.html#home" aria-label="Jericho Technology">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
         <span class="brand-line1">Jericho</span>
         <span class="brand-line2">Technology</span>
       </a>
@@ -50,5 +50,6 @@
     const size = () => f.style.height = (innerHeight - (header?.offsetHeight||0)) + 'px';
     size(); addEventListener('resize', size);
   </script>
+  <script>history.replaceState("", "", "graphite");</script>
 </body>
 </html>
