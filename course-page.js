@@ -28,32 +28,102 @@ document.addEventListener('DOMContentLoaded', () => {
     scroller.scrollBy({ left:  stepWidth(), behavior: 'smooth' })
   );
 
+  // ---- Edge fade visibility (hide at ends) ----
+  const leftFade  = document.querySelector('.left-fade');
+  const rightFade = document.querySelector('.right-fade');
+
+  function updateFades() {
+    if (!scroller) return;
+    const max = scroller.scrollWidth - scroller.clientWidth - 1;
+    const x = scroller.scrollLeft;
+    // only show when we are away from an edge
+    leftFade?.classList.toggle('show', x > 4);
+    rightFade?.classList.toggle('show', x < max - 4);
+  }
+
+  scroller?.addEventListener('scroll', updateFades);
+  window.addEventListener('resize', updateFades);
+  // run once after layout paints
+  requestAnimationFrame(updateFades);
+
   // Lightbox
   const lightbox = document.getElementById('lightbox');
   const lbImg    = document.getElementById('lightboxImg');
   const lbCap    = document.getElementById('lightboxCap');
   const lbClose  = document.getElementById('lightboxClose');
 
-  function openLightbox(src, cap, alt) {
+  // We'll inject/remove a <video> element when needed
+  let lbVid = null;
+
+  function showImageInLightbox(src, altOrCap, capText) {
+    // remove any prior video
+    if (lbVid) {
+      lbVid.pause();
+      lbVid.remove();
+      lbVid = null;
+    }
+    lbImg.hidden = false;
     lbImg.src = src;
-    lbImg.alt = alt || cap || '';
-    lbCap.textContent = cap || '';
+    lbImg.alt = altOrCap || capText || '';
+    lbCap.textContent = capText || altOrCap || '';
     lightbox.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
   }
-  function closeLightbox() {
-    lightbox.setAttribute('hidden', '');
+
+  function showVideoInLightbox(videoEl, capText) {
+    // clean previous media
+    lbImg.hidden = true;
     lbImg.src = '';
+    if (lbVid) {
+      lbVid.pause();
+      lbVid.remove();
+      lbVid = null;
+    }
+    // clone video sources into a new element for the lightbox
+    lbVid = document.createElement('video');
+    lbVid.controls = false;
+    lbVid.autoplay = true;
+    lbVid.loop = true;
+    lbVid.playsInline = true;
+    // copy <source> children
+    lbVid.innerHTML = videoEl.innerHTML;
+
+    const content = lightbox.querySelector('.lightbox-content');
+    content.prepend(lbVid);
+
+    lbCap.textContent = capText || '';
+    lightbox.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.setAttribute('hidden', '');
+    // cleanup
+    if (lbVid) {
+      lbVid.pause();
+      lbVid.remove();
+      lbVid = null;
+    }
+    lbImg.src = '';
+    lbImg.hidden = false; // reset default
     document.body.style.overflow = '';
   }
 
-  // Open on image click
+  // Open on image OR video click
   scroller?.addEventListener('click', (e) => {
-    const img = e.target.closest('img');
-    if (!img) return;
-    const fig = img.closest('figure');
-    const cap = fig?.querySelector('figcaption')?.textContent?.trim() || img.alt || '';
-    openLightbox(img.src, cap, img.alt);
+    const media = e.target.closest('img, video');
+    if (!media) return;
+
+    const fig = media.closest('figure');
+    const cap = fig?.querySelector('figcaption')?.textContent?.trim() || '';
+
+    if (media.tagName === 'IMG') {
+      showImageInLightbox(media.src, media.alt, cap);
+    } else {
+      // it's a <video> tile
+      showVideoInLightbox(media, cap);
+    }
   });
 
   // Close actions
