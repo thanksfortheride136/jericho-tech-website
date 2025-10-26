@@ -6,35 +6,35 @@ const COURSES = [
     title: "Robotics 3", 
     cat: ["robot"], 
     img: "pictures/edison.png",
-    text: "Design process, rapid prototyping, CAD fundamentals, laser cutting, and 3D printing."
+    text: "Introductory robotics course using Edison robots and Scratch."
   },
 
   { 
     title: "Robotics 4", 
     cat: ["robot"], 
     img: "pictures/spike.png",
-    text: "Mechanisms, materials, and product development. Team capstone prototype & showcase."
+    text: "Robotics course introducing students to Spike Prime robots."
   },
 
   { 
     title: "Robotics 5", 
     cat: ["robot"], 
     img: "pictures/spike2.jpg",
-    text: "Computational thinking, data & the Internet, plus a creative programming project."
+    text: "The final course in the elementary school robotics program, builds upon the previous skills students have learned using Spike Prime robots."
   },
 
   { 
     title: "Technology 6", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-    text: "Foundations of coding with Python & JavaScript: variables, logic, functions, and mini-apps."
+    img: "pictures/tech6.jpg",
+    text: "The introductory middle school technology course focusing an introduction to design, woodworking and digital tools."
   },
 
   { 
     title: "Technology 7", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1200&auto=format&fit=crop",
-    text: "Maker skills, safety, and design challenges using hand tools, laser cutters, and 3D printers."
+    img: "pictures/tech7.jpg",
+    text: "Technology 7 builds on the previous years, furthering skills in 3-D printing, design, lasercutting and computer science."
   },
 
   { 
@@ -47,8 +47,8 @@ const COURSES = [
   { 
     title: "Technology 8", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop",
-    text: "Parametric CAD, slicing, CAM workflows, and rapid iteration with 3D printers & laser cutters."
+    img: "pictures/tech8.jpg",
+    text: "The final technology class in the middle school, builds on skills learned in the prior years, deepening students knowledge of technology & engineering."
   },
 
   { 
@@ -69,21 +69,21 @@ const COURSES = [
     title: "MS Research: Engineering", 
     cat: ["middle"], 
     img: "pictures/trebuchet.jpg",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments."
+    text: "Students explore how the engineering design process can help them research a problem, create a design and go from an idea in their head to a real world prototype."
   },
 
   { 
-    title: "MS Research: Ukulele Sound Lab", 
+    title: "MS Research: The Science of Sound", 
     cat: ["middle"], 
     img: "pictures/uke.jpg",
-    text: "Acoustics, instrumentation, and data analysis with custom laser-cut instruments."
+    text: "Students explore the science of sound by creating a custom ukulele that functions as an instrument but also a tool for testing sound waves."
   },
 
   { 
     title: "Video Game Development", 
     cat: ["comp"], 
     img: "pictures/unity.png",
-    text: "Game loops, sprites, and level design — create and publish a playable project."
+    text: "Students utilize Unity 3-D, Adobe illustrator, Blender & the C# programming language to contruct video games."
   },
 
   { 
