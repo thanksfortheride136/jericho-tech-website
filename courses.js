@@ -81,63 +81,63 @@ const COURSES = [
 
   { 
     title: "Video Game Development", 
-    cat: ["comp"], 
+    cat: ["comp", "high"], 
     img: "pictures/unity.png",
     text: "Students utilize Unity 3-D, Adobe illustrator, Blender & the C# programming language to contruct video games."
   },
 
   { 
     title: "Design & Drawing for Production (DDP)", 
-    cat: ["engineering"], 
+    cat: ["engineering", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "In Design and Drawing for Production, students turn ideas into reality through sketching, technical drawing, and 3D modeling. They apply the engineering design process to create and refine products, building problem-solving and design skills through hands-on projects."
   },
 
   { 
     title: "Introduction to Engineering Design (IED)", 
-    cat: ["engineering"], 
+    cat: ["engineering", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Students dig deep into the engineering design process, applying math, science, and engineering standards to hands-on projects like designing a new toy or improving an existing product."
   },
 
   { 
     title: "Computer Integrated Manufacturing (CIM)", 
-    cat: ["engineering"], 
+    cat: ["engineering", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Students discover and explore manufacturing processes, product design, robotics, and automation, and then they apply what they have learned to design solutions for real-world manufacturing problems."
   },
 
   { 
     title: "Principles of Engineering (POE)", 
-    cat: ["engineering"], 
+    cat: ["engineering", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Students explore how modern engineers help improve the world through diverse engineering fields, such as product design, mechanical design, infrastructure, and sustainability. Students learn and use some of the cutting edge tools engineers use in robotics, 3D modeling, programming, and prototyping. "
   },
 
   { 
     title: "Civil Engineering & Architecture (CEA)", 
-    cat: ["engineering"], 
+    cat: ["engineering", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Students learn important aspects of building and site design and development, and then they apply what they know to design a commercial building."
   },
 
   { 
-    title: "Robotics(High School)", 
-    cat: ["robot"], 
+    title: "Robotics (High School)", 
+    cat: ["robot", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Students learn the basics about robotics, sensors, computer science and mechanics."
   },
 
   { 
-    title: "Video Production", 
-    cat: ["video"], 
+    title: "Video Production (High School)", 
+    cat: ["video", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Introductory level high school video production class."
   },
 
   { 
     title: "Advanced Video Production", 
-    cat: ["video"], 
+    cat: ["video", "high"], 
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",
     text: "Advanced level high school video production class."
   },
