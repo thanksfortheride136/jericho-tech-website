@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jericho Technology Program</title>
+
+  <!-- ✅ Existing site styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ Pan/Zoom for SVG -->
+  <script src="https://unpkg.com/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+
+  <style>
+    :root{
+      --top-offset: 64px;  /* Adjust to match your nav bar height */
+      --blue:#1e3a8a;
+      --line:#3b82f6;
+      --core:#eff6ff;
+      --ms:#eefce8;
+      --hs:#fff7ed;
+      --text:#0f172a;
+      --hint-bg: rgba(255,255,255,.85);
+    }
+
+    html, body { height: 100%; margin: 0; }
+    body { background:#f3f4f6; color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+    /* Full-screen SVG canvas below navbar */
+    .canvas {
+      position: fixed;
+      top: var(--top-offset);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .canvas svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Node styles */
+    .node text{font-size:12px; dominant-baseline:middle; text-anchor:middle; fill:var(--text)}
+    .core rect{fill:var(--core); stroke:var(--line); stroke-width:2}
+    .ms   rect{fill:var(--ms);   stroke:#16a34a; stroke-width:2}
+    .hs   rect{fill:var(--hs);   stroke:#ea580c; stroke-width:2}
+    .edge {stroke:var(--line); stroke-width:2; fill:none}
+    .arrow{marker-end:url(#arrow)}
+
+    /* Floating hint */
+    .hint {
+      position: fixed;
+      right: 12px;
+      top: calc(var(--top-offset) + 12px);
+      background: var(--hint-bg);
+      backdrop-filter: blur(6px);
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: #475569;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ NAVBAR FROM YOUR ORIGINAL FILE -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="program.html" class="active">Program Overview</a></li>
+          <li><a href="#projects">Project Gallery</a></li>
+          <li><a href="#software">Equipment</a></li>
+          <li><a href="#atlas">ATLAS</a></li>
+          <li><a href="graphite.html">Graphite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ Full screen SVG canvas -->
+  <div class="hint">Scroll to zoom • drag to pan</div>
+
+  <div class="canvas">
+    <svg id="programSvg" viewBox="0 0 2600 820" role="img" aria-label="Course sequence">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+          <path d="M0,0 L10,4 L0,8 Z" fill="var(--line)"></path>
+        </marker>
+      </defs>
+
+      <!-- ==== MAIN SPINE NODES ==== -->
+      <g class="node core" transform="translate(  80,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>3rd Grade Robotics</text></g>
+      <g class="node core" transform="translate( 290,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>4th Grade Robotics</text></g>
+      <g class="node core" transform="translate( 500,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>5th Grade Robotics</text></g>
+      <g class="node core" transform="translate( 710,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>6th Grade Technology</text></g>
+      <g class="node core" transform="translate( 920,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>7th Grade Technology</text></g>
+      <g class="node core" transform="translate(1130,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>8th Grade Technology</text></g>
+      <g class="node core" transform="translate(1340,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Introduction to Engineering Design</text></g>
+      <g class="node core" transform="translate(1550,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Computer Integrated Manufacturing</text></g>
+      <g class="node core" transform="translate(1760,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Principles of Engineering</text></g>
+      <g class="node core" transform="translate(1970,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Design &amp; Drawing for Production</text></g>
+      <g class="node core" transform="translate(2180,350)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Civil Engineering &amp; Architecture</text></g>
+
+      <!-- MS branches -->
+      <g class="node ms" transform="translate( 920,210)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Gadgets &amp; Gizmos</text></g>
+      <g class="node ms" transform="translate(1130,490)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>World of Technology</text></g>
+      <g class="node ms" transform="translate(1130,560)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>MS Research: Science of Sound</text></g>
+      <g class="node ms" transform="translate(1130,630)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>MS Research: Engineering</text></g>
+      <g class="node ms" transform="translate(1130,700)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Video Production 8</text></g>
+
+      <!-- HS electives -->
+      <g class="node hs" transform="translate(1340,200)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Video Game Design</text></g>
+      <g class="node hs" transform="translate(1340,240)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Robotics</text></g>
+      <g class="node hs" transform="translate(1340,280)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Video Production</text></g>
+      <g class="node hs" transform="translate(1340,320)"><rect x="-95" y="-23" width="190" height="46" rx="8"/><text>Advanced Video Production</text></g>
+
+      <!-- Edges -->
+      <g class="edge arrow">
+        <!-- horizontal spine -->
+        <path d="M 175,350 H 195"/><path d="M 385,350 H 405"/><path d="M 595,350 H 615"/><path d="M 805,350 H 825"/>
+        <path d="M 1015,350 H 1035"/><path d="M 1225,350 H 1245"/><path d="M 1435,350 H 1455"/><path d="M 1645,350 H 1665"/>
+        <path d="M 1855,350 H 1875"/><path d="M 2065,350 H 2085"/>
+
+        <!-- 7th up -->
+        <path d="M 920,327 V 233"/>
+
+        <!-- 8th down stack -->
+        <path d="M 1130,373 V 467"/><path d="M 1130,517 V 550"/><path d="M 1130,587 V 620"/><path d="M 1130,657 V 690"/>
+
+        <!-- IED up to electives -->
+        <path d="M 1340,327 V 223"/><path d="M 1340,327 V 263"/><path d="M 1340,327 V 303"/><path d="M 1340,327 V 343"/>
+      </g>
+    </svg>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+
+  <!-- existing nav toggle script -->
+  <script src="script.js" defer></script>
+  <script>
+    svgPanZoom('#programSvg', {
+      zoomEnabled: true,
+      controlIconsEnabled: false,
+      fit: true,
+      center: true,
+      minZoom: 0.35,
+      maxZoom: 3,
+      zoomScaleSensitivity: 0.4
+    });
+  </script>
+</body>
+</html>
