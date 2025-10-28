@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // IMPORTANT: paths reflect the new /videos/ folder
   const vids = [
-    "videos/bannervids/banner.mp4"
+    "videos/bannervids/banner.webm"
   ];
 
   let i = 0;
