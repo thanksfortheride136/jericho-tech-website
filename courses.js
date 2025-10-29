@@ -54,7 +54,7 @@ const COURSES = [
   { 
     title: "World of Technology 8", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/mousecar.png",
     text: "Parametric CAD, slicing, CAM workflows, and rapid iteration with 3D printers & laser cutters."
   },
 
