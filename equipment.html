@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equipment • Jericho Technology</title>
+  <link rel="stylesheet" href="equipment.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ====== SITE HEADER ====== -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="coming-soon.html">Project Gallery</a></li>
+          <li><a href="equipment.html" class="active">Equipment</a></li>
+          <li><a href="coming-soon.html">ATLAS</a></li>
+          <li><a href="graphite.html">Graphite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== PAGE CONTENT ====== -->
+  <main>
+    <header class="equip-hero">
+      <div class="wrap">
+        <h1>Our Equipment & Tools</h1>
+        <p class="lede">
+          From precision digital fabrication to classic shop tools, these are the machines students
+          use to learn design, build prototypes, and test ideas safely and professionally.
+        </p>
+      </div>
+    </header>
+
+    <!-- Sticky category nav -->
+    <nav class="equip-nav">
+      <div class="wrap">
+        <a href="#fab">Digital Fabrication</a>
+        <a href="#cnc">CNC & Milling</a>
+        <a href="#wood">Woodworking</a>
+        <a href="#hand">Hand Tools</a>
+        <a href="#elec">Electronics</a>
+        <a href="#safety">Safety</a>
+      </div>
+    </nav>
+
+    <!-- ========== DIGITAL FABRICATION ========== -->
+    <section id="fab" class="equip-section">
+  <div class="wrap">
+    <h2>Digital Fabrication</h2>
+
+    <div class="equip-grid">
+      <!-- Card 1 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/3dprinters.png"
+               alt="Prusa Print Farm"
+               class="focus-top-20">
+        </figure>
+        <div class="card-body">
+          <h3>Prusa 3-D Print Farm</h3>
+          <p class="desc">
+            Prusa MK3's are reliable 3-D printers that run around the clock to print student parts.
+            These printers use Fused Deposition Modeling (FDM) with PLA, and we also use ABS when extra strength is needed.
+          </p>
+          <ul class="specs">
+            <li>Build volume: ~256 × 256 × 256 mm</li>
+            <li>Nozzle: 0.4 mm</li>
+            <li>Materials: PLA, ABS (plus others)</li>
+          </ul>
+          <div class="meta"><span class="tag">Digital Fab</span><span class="tag">Additive</span></div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/bambu.png"
+               alt="Bambu Labs X1 Carbon 3D printer"
+               style="--oy:-10%; --ox:50%;">
+        </figure>
+        <div class="card-body">
+          <h3>3-D Printers: Bambu Labs X1 Carbon</h3>
+          <p class="desc">
+            This printer is ~50% faster than most traditional FDM printers. It features an enclosed chamber for even heating and
+            a material system that allows for multi-color prints.
+          </p>
+          <ul class="specs">
+            <li>Build volume: ~256 × 256 × 256 mm</li>
+            <li>Nozzle: 0.4 mm</li>
+            <li>Materials: PLA, ABS (plus others)</li>
+          </ul>
+          <div class="meta"><span class="tag">Digital Fab</span><span class="tag">Additive</span></div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/peoply.png"
+               alt="Peopoly SLA 3D printer"
+               style="--oy:-10%; --ox:50%;">
+        </figure>
+        <div class="card-body">
+          <h3>3-D Printers: Peopoly SLA Printer</h3>
+          <p class="desc">
+            SLA printing for ultimate precision. Uses UV-curable resin and is ideal for extremely small, highly detailed parts.
+          </p>
+          <ul class="specs">
+            <li>Build volume: ~13.6 × 17.6 × 15.7 in</li>
+            <li>Materials: UV resin</li>
+          </ul>
+          <div class="meta"><span class="tag">Digital Fab</span><span class="tag">Additive</span></div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/bambu.png"
+               alt="Bambu Labs X1 Carbon 3D printer"
+               style="--oy:-10%; --ox:50%;">
+        </figure>
+        <div class="card-body">
+          <h3>3-D Printers: Bambu Labs X1 Carbon</h3>
+          <p class="desc">
+            High-speed, enclosed 3-D printing with reliable heat retention and a multi-material unit for multi-color prints.
+          </p>
+          <ul class="specs">
+            <li>Build volume: ~256 × 256 × 256 mm</li>
+            <li>Nozzle: 0.4 mm</li>
+            <li>Materials: PLA, ABS (plus others)</li>
+          </ul>
+          <div class="meta"><span class="tag">Digital Fab</span><span class="tag">Additive</span></div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/equipment/laser-cutter.jpg"
+               alt="Laser cutter engraving plywood">
+        </figure>
+        <div class="card-body">
+          <h3>Laser Cutter (Glowforge Pro)</h3>
+          <p class="desc">Precision cutting/engraving for plywood, acrylic, and leather from SVG/PDF files.</p>
+          <ul class="specs">
+            <li>Max area: 11 × 19.5 inches</li>
+            <li>Optics: CO₂ 45 W</li>
+            <li>Files: SVG / PDF</li>
+          </ul>
+          <div class="meta"><span class="tag">Subtractive</span><span class="tag">Engraving</span></div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="equip-card">
+        <figure class="media">
+          <img src="pictures/equipment/vacuum-former.jpg"
+               alt="Vacuum former shaping plastic over a mold">
+        </figure>
+        <div class="card-body">
+          <h3>Vacuum Former</h3>
+          <p class="desc">Form sheet plastic over 3-D printed molds for packaging and custom housings.</p>
+          <ul class="specs">
+            <li>Sheet size: 12 × 12 inches</li>
+            <li>Materials: HIPS, PETG, ABS</li>
+            <li>Cycle time: ~2–3 min</li>
+          </ul>
+          <div class="meta"><span class="tag">Forming</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- ========== CNC & MILLING ========== -->
+    <section id="cnc" class="equip-section">
+      <div class="wrap">
+        <h2>CNC & Milling</h2>
+        <div class="equip-grid">
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/benchtop-mill.jpg" alt="Benchtop milling machine cutting aluminum">
+            </figure>
+            <div class="card-body">
+              <h3>Benchtop Milling Machine</h3>
+              <p class="desc">Precision milling for plastics and soft metals; fundamentals of work-holding and toolpaths.</p>
+              <ul class="specs">
+                <li>Travel: 250 × 150 × 150 mm</li>
+                <li>Collet: ER-11</li>
+                <li>Workholding: Vise, clamps</li>
+              </ul>
+              <div class="meta"><span class="tag">CNC</span><span class="tag">Machining</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WOODWORKING ========== -->
+    <section id="wood" class="equip-section">
+      <div class="wrap">
+        <h2>Woodworking</h2>
+        <div class="equip-grid">
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/bandsaw.jpg" alt="Bandsaw cutting wood">
+            </figure>
+            <div class="card-body">
+              <h3>Bandsaw</h3>
+              <p class="desc">Smooth curved cuts and resaw capability for instrument bodies and fixtures.</p>
+              <ul class="specs">
+                <li>Throat: 12"</li>
+                <li>Blade width: 1/8"–3/4"</li>
+                <li>Fence & dust collection</li>
+              </ul>
+              <div class="meta"><span class="tag">Woodshop</span></div>
+            </div>
+          </article>
+
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/drill-press.jpg" alt="Student using a drill press">
+            </figure>
+            <div class="card-body">
+              <h3>Drill Press</h3>
+              <p class="desc">Accurate vertical holes with jigs and clamps for safe, repeatable results.</p>
+              <ul class="specs">
+                <li>Chuck: 1/2"</li>
+                <li>RPM range: 300–3,000</li>
+                <li>Laser crosshair</li>
+              </ul>
+              <div class="meta"><span class="tag">Woodshop</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HAND TOOLS ========== -->
+    <section id="hand" class="equip-section">
+      <div class="wrap">
+        <h2>Hand Tools</h2>
+        <div class="equip-grid">
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/hand-tools.jpg" alt="Assorted hand tools neatly organized">
+            </figure>
+            <div class="card-body">
+              <h3>Essential Hand Tools</h3>
+              <p class="desc">Calipers, squares, flush cutters, files, clamps, and precision screwdrivers.</p>
+              <ul class="specs">
+                <li>Metric & Imperial</li>
+                <li>Locking clamps & quick grips</li>
+                <li>ESD-safe sets</li>
+              </ul>
+              <div class="meta"><span class="tag">Bench</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ELECTRONICS ========== -->
+    <section id="elec" class="equip-section">
+      <div class="wrap">
+        <h2>Electronics</h2>
+        <div class="equip-grid">
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/soldering.jpg" alt="Student soldering with fume extractor">
+            </figure>
+            <div class="card-body">
+              <h3>Soldering Stations</h3>
+              <p class="desc">Temp-controlled irons, fume extraction, and third-hands for clean PCB work.</p>
+              <ul class="specs">
+                <li>320–400 °C range</li>
+                <li>Fine & chisel tips</li>
+                <li>Lead-free solder</li>
+              </ul>
+              <div class="meta"><span class="tag">Electronics</span></div>
+            </div>
+          </article>
+
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/test-gear.jpg" alt="Multimeter and power supply">
+            </figure>
+            <div class="card-body">
+              <h3>Test Gear</h3>
+              <p class="desc">Bench supplies, multimeters, and USB logic analyzers for debugging and sensors.</p>
+              <ul class="specs">
+                <li>0–30 V, 0–5 A power</li>
+                <li>Auto-range DMMs</li>
+                <li>USB logic analyzer</li>
+              </ul>
+              <div class="meta"><span class="tag">Electronics</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SAFETY ========== -->
+    <section id="safety" class="equip-section">
+      <div class="wrap">
+        <h2>Safety & PPE</h2>
+        <div class="equip-grid">
+          <article class="equip-card">
+            <figure class="media">
+              <img src="pictures/equipment/ppe.jpg" alt="Safety glasses, ear protection, and gloves">
+            </figure>
+            <div class="card-body">
+              <h3>Safety Gear</h3>
+              <p class="desc">Safety glasses, hearing protection, gloves, and lab coats; safety briefings required.</p>
+              <ul class="specs">
+                <li>ANSI Z87.1 eyewear</li>
+                <li>Hearing: 23–30 dB NRR</li>
+                <li>First-aid & spill kits</li>
+              </ul>
+              <div class="meta"><span class="tag">Safety</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX DIALOG ===== -->
+  <dialog id="lightbox" aria-label="Image preview">
+    <button class="lb-close" aria-label="Close image">×</button>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption" class="lb-cap"></p>
+  </dialog>
+
+  <script>
+  // ===== Equipment image lightbox =====
+  (function(){
+    const dlg = document.getElementById('lightbox');
+    if (!dlg) return;
+
+    const imgEl = document.getElementById('lightbox-img');
+    const capEl = document.getElementById('lightbox-caption');
+    const closeBtn = dlg.querySelector('.lb-close');
+
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('.equip-card .media img');
+      if (!img) return;
+
+      const fullSrc = img.dataset.full || img.src;
+      const caption = img.dataset.caption || img.alt || '';
+
+      imgEl.src = fullSrc;
+      imgEl.alt = img.alt || 'Equipment image';
+      capEl.textContent = caption;
+
+      try { dlg.showModal(); } catch { dlg.setAttribute('open', ''); }
+    });
+
+    const close = () => {
+      if (dlg.open && dlg.close) dlg.close();
+      else dlg.removeAttribute('open');
+      imgEl.src = '';
+    };
+
+    closeBtn.addEventListener('click', close);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

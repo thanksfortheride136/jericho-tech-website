@@ -1,0 +1,232 @@
+/* ================== Jericho Technology — Equipment Page ================== */
+:root {
+  --navy: #142a5e;
+  --gold: #f2c94c;
+  --ink: #0e1320;
+  --muted: #6b7280;
+  --bg: #f6f7fb;
+  --card: #fff;
+  --ring: rgba(20,42,94,0.12);
+}
+
+/* Layout helper */
+.wrap {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* ============= HERO & NAV ============= */
+.equip-hero {
+  background: var(--bg);
+  padding: 2.25rem 0 .75rem;
+}
+.equip-hero h1 {
+  color: var(--navy);
+  margin: 0 0 .35rem;
+  font-size: clamp(1.8rem, 1.05rem + 2.4vw, 2.4rem);
+  letter-spacing: .2px;
+}
+.equip-hero .lede {
+  color: var(--muted);
+  max-width: 75ch;
+  margin: 0;
+}
+.equip-nav {
+  position: sticky;
+  top: var(--header-height, 0px);
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.equip-nav .wrap {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  padding: .6rem 0;
+}
+.equip-nav a {
+  padding: .45rem .75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: .95rem;
+  background: rgba(20,42,94,.06);
+}
+.equip-nav a:hover {
+  background: rgba(20,42,94,.12);
+}
+
+/* ============= SECTIONS ============= */
+.equip-section {
+  padding: 1.25rem 0 2.25rem;
+  background: var(--bg);
+}
+.equip-section h2 {
+  color: var(--navy);
+  font-size: clamp(1.2rem, .9rem + 1.2vw, 1.6rem);
+  margin: .5rem 0 1rem;
+}
+
+/* ============= GRID ============= */
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+}
+
+/* ============= CARD ============= */
+.equip-card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 1px 0 var(--ring), 0 15px 35px rgba(10,20,40,0.05);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid rgba(10,20,40,0.04);
+  min-height: 560px; /* ensures even card heights */
+}
+
+/* Media */
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3; /* consistent height across cards */
+  overflow: hidden;
+  background: #e9eef6;
+}
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--ox, 50%) var(--oy, 50%);
+  display: block;
+  transform: scale(1.001);
+  cursor: zoom-in;
+}
+
+/* Optional focus helpers */
+.focus-top-10 { --oy: 10%; }
+.focus-top-20 { --oy: 20%; }
+.focus-top-30 { --oy: 30%; }
+.focus-x-40 { --ox: 40%; }
+.focus-x-50 { --ox: 50%; }
+.focus-x-60 { --ox: 60%; }
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  padding: 1rem 1rem 1.1rem;
+}
+.card-body h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+.card-body .desc {
+  margin: 0;
+  color: #3a3f4a;
+  line-height: 1.45;
+}
+.specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #3a3f4a;
+}
+.specs li {
+  padding-left: 1.1rem;
+  position: relative;
+  margin: .25rem 0;
+}
+.specs li::before {
+  content: "•";
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+}
+
+/* Tags — “bubble” alignment fix */
+.card-body .meta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1;
+  padding: .22rem .6rem;
+  border-radius: 999px;
+  background: rgba(20,42,94,.06);
+  color: var(--navy);
+  font-weight: 600;
+  font-size: .78rem;
+}
+
+/* Footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.06);
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+}
+.site-footer a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============= LIGHTBOX ============= */
+#lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 92vw;
+}
+#lightbox::backdrop {
+  background: rgba(6,12,24,0.75);
+  backdrop-filter: blur(2px);
+}
+#lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(10,20,40,0.5);
+}
+.lb-close {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+.lb-close:hover { filter: brightness(0.95); }
+.lb-cap {
+  margin: .6rem auto 0;
+  text-align: center;
+  color: #e9edf6;
+  font-size: .95rem;
+  max-width: 80ch;
+}
+dialog[open] #lightbox-img {
+  cursor: zoom-out;
+}
