@@ -40,7 +40,7 @@ const COURSES = [
   { 
     title: "Gadgets & Gizmos 7", 
     cat: ["middle"], 
-    img: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/gadgets.png",
     text: "Maker skills, safety, and design challenges using hand tools, laser cutters, and 3D printers."
   },
 
@@ -61,7 +61,7 @@ const COURSES = [
   { 
     title: "Video Production 8", 
     cat: ["video", "middle"],   // ✅ supports multiple categories
-    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop",
+    img: "pictures/finalcut.png",
     text: "Camera basics, editing, and storytelling with studio workflow and production roles."
   },
 
