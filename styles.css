@@ -137,7 +137,7 @@ main {
 
 .video-frame {
   width: 100vw;
-  aspect-ratio: 21 / 9;          /* cinematic ratio */
+  aspect-ratio: 21 / 9;          /* wider ratio */
   background: #000;
   overflow: hidden;
   border-radius: 0;
@@ -152,7 +152,7 @@ main {
   object-fit: cover;
 }
 
-/* Optional gradient at bottom of video */
+/* Optional gradient at bottom of video? */
 .video-frame::after {
   content: "";
   position: absolute;
