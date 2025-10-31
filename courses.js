@@ -83,7 +83,7 @@ const COURSES = [
     title: "Video Game Development", 
     cat: ["comp", "high"], 
     img: "pictures/unity.png",
-    text: "Students utilize Unity 3-D, Adobe illustrator, Blender & the C# programming language to contruct video games."
+    text: "Design, build, play, and test your own video games from concept to completion."
   },
 
   { 
