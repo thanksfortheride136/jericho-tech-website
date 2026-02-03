@@ -75,7 +75,7 @@ const COURSES = [
   { 
     title: "MS Research: The Science of Sound", 
     cat: ["middle"], 
-    img: "pictures/uke.jpg",
+    img: "pictures/ukecoverpic.png",
     text: "Students explore the science of sound by creating a custom ukulele that functions as an instrument but also a tool for testing sound waves."
   },
 
