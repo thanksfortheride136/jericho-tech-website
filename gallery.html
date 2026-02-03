@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Project Gallery • Jericho Technology</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body class="blueprint-bg">
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a class="active" href="gallery.html">Project Gallery</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="coming-soon.html">ATLAS</a></li>
+          <li><a href="graphite.html">Graphite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container gallery-page">
+    <section class="gallery-hero">
+      <h1>Student Project Gallery</h1>
+      <p class="lede">A living wall of builds, prototypes, and experiments across all classes.</p>
+
+      <div class="gallery-controls" role="group" aria-label="Gallery filters">
+        <input id="search" class="search" type="search" placeholder="Search projects (ukulele, robotics, CAD…)">
+        <div class="chips" id="chips"></div>
+      </div>
+    </section>
+
+    <section class="pinboard" id="pinboard" aria-label="Project grid"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+
+    <button class="lightbox-arrow left" id="lightboxPrev" aria-label="Previous image">←</button>
+    <button class="lightbox-arrow right" id="lightboxNext" aria-label="Next image">→</button>
+
+    <figure class="lightbox-figure" role="document">
+      <img id="lightboxImg" alt="">
+      <figcaption class="lightbox-caption">
+        <div class="cap-title" id="lightboxTitle"></div>
+        <div class="cap-sub" id="lightboxSub"></div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script defer src="gallery.js"></script>
+</body>
+</html>
