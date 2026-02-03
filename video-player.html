@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Videos • Jericho Technology</title>
+
+  <!-- Reuse your existing CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================
+       Video Page Layout
+    ============================ */
+    .video-page {
+      padding: 3rem 0 4rem;
+      text-align: center;
+    }
+
+    .video-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      box-shadow: var(--shadow);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ============================
+       Navigation Arrows
+    ============================ */
+    .video-nav {
+      margin-top: 1.4rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .video-nav button {
+      font-size: 1.4rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: white;
+      cursor: pointer;
+      color: var(--navy);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .video-nav button:hover {
+      background: var(--paper);
+      transform: translateY(-1px);
+    }
+
+    .video-index {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .video-title {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER / NAV (unchanged) ===== -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="coming-soon.html">Project Gallery</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="coming-soon.html">ATLAS</a></li>
+          <li><a href="graphite.html">Graphite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container video-page">
+    <a class="back" href="courses.html">← Back to Course</a>
+
+    <h1 class="video-title" id="videoTitle"></h1>
+
+    <div class="video-wrapper">
+      <iframe
+        id="videoFrame"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-nav">
+      <button id="prevBtn" aria-label="Previous video">←</button>
+      <button id="nextBtn" aria-label="Next video">→</button>
+    </div>
+
+    <div class="video-index" id="videoIndex"></div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    const videos = [
+      {
+        title: "Ukulele Build – Laser Cutting",
+        src: "https://drive.google.com/file/d/168STxVA_0SGUafk1yHFXpxKh8a3YJdfi/preview" 
+      },
+      {
+        title: "Ukulele Assembly – Clamping",
+        src: "https://drive.google.com/file/d/FILE_ID_2/preview"
+      },
+      {
+        title: "Sound Testing & Frequencies",
+        src: "https://drive.google.com/file/d/FILE_ID_3/preview"
+      }
+    ];
+
+    let current = 0;
+
+    const frame = document.getElementById("videoFrame");
+    const title = document.getElementById("videoTitle");
+    const index = document.getElementById("videoIndex");
+
+    function loadVideo(i) {
+      frame.src = videos[i].src;
+      title.textContent = videos[i].title;
+      index.textContent = `Video ${i + 1} of ${videos.length}`;
+    }
+
+    document.getElementById("prevBtn").onclick = () => {
+      current = (current - 1 + videos.length) % videos.length;
+      loadVideo(current);
+    };
+
+    document.getElementById("nextBtn").onclick = () => {
+      current = (current + 1) % videos.length;
+      loadVideo(current);
+    };
+
+    // Init
+    loadVideo(current);
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
