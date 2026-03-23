@@ -52,24 +52,32 @@
 
 /* Buttons under media */
 .action-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: .7rem;
   margin-top: .8rem;
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: .45rem;
-  padding: .62rem .95rem;
+  min-height: 72px;
+  padding: .8rem .95rem;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, .10);
   background: #fff;
   color: var(--navy);
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
+  line-height: 1.25;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+
+  /* helps text wrap more cleanly instead of awkward squeezing */
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .btn:hover {
@@ -149,7 +157,7 @@
 
 /* WebKit hide */
 
-.scroller>figure {
+.scroller > figure {
   scroll-snap-align: start;
   margin: 0;
   background: #fff;
@@ -237,7 +245,6 @@
 
 /* Larger tiles on very wide screens */
 @media (min-width: 1400px) {
-
   .scroller img,
   .scroller video {
     height: 220px;
@@ -250,6 +257,10 @@
     grid-template-columns: 1fr;
   }
 
+  .action-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .scroller {
     grid-auto-columns: 80%;
   }
@@ -260,6 +271,16 @@
 
   .gallery-arrow.right {
     right: 4px;
+  }
+}
+
+@media (max-width: 560px) {
+  .action-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    min-height: 60px;
   }
 }
 

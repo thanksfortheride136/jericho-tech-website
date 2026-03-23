@@ -73,11 +73,13 @@ main {
   line-height: 1;
   text-decoration: none;
 }
+
 .brand-line1 {
   font-weight: 800;
   color: var(--navy);
   letter-spacing: 0.2px;
 }
+
 .brand-line2 {
   font-weight: 700;
   color: var(--purple);
@@ -101,6 +103,7 @@ main {
   padding: 0.5rem 0;
   position: relative;
 }
+
 .nav a::after {
   content: "";
   position: absolute;
@@ -111,6 +114,7 @@ main {
   background: var(--purple);
   transition: width 0.25s ease;
 }
+
 .nav a:hover::after,
 .nav a:focus::after {
   width: 100%;
@@ -137,11 +141,11 @@ main {
 
 .video-frame {
   width: 100vw;
-  aspect-ratio: 21 / 9;          /* wider ratio */
+  aspect-ratio: 21 / 9;
   background: #000;
   overflow: hidden;
   border-radius: 0;
-  max-height: 65vh;              /* ensures paragraph shows */
+  max-height: 65vh;
   position: relative;
 }
 
@@ -152,7 +156,6 @@ main {
   object-fit: cover;
 }
 
-/* Optional gradient at bottom of video? */
 .video-frame::after {
   content: "";
   position: absolute;
@@ -168,11 +171,11 @@ main {
    Intro Text
 ============================ */
 .intro {
-  padding: 3.0rem 0 2.2rem;
-  text-align: center;             /* centers the text */
+  padding: 3rem 0 2.2rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;            /* ensures it's centered inside the container */
+  align-items: center;
 }
 
 .intro h1 {
@@ -183,9 +186,51 @@ main {
 
 .intro p {
   margin: 0;
-  max-width: 100ch;                /* keeps the paragraph readable */
+  max-width: 100ch;
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+/* ============================
+   Course Action Buttons
+============================ */
+.action-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+  align-items: stretch;
+}
+
+.action-row .btn {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(19, 41, 75, 0.12);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  
+  /* prevents ugly letter-by-letter squeezing */
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.action-row .btn:hover,
+.action-row .btn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.10);
+  border-color: rgba(91, 47, 176, 0.35);
 }
 
 /* ============================
@@ -197,6 +242,11 @@ main {
   color: var(--muted);
   text-align: center;
   padding: 1rem 0 2rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ============================
@@ -233,5 +283,18 @@ main {
   .video-frame::after {
     height: 50px;
   }
+
+  .action-row {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
 }
-.card-link { text-decoration: none; color: inherit; }
+
+@media (max-width: 560px) {
+  .action-row {
+    grid-template-columns: 1fr;
+  }
+
+  .action-row .btn {
+    min-height: 56px;
+  }
+}
