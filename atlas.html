@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATLAS | Jericho Technology Program</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jericho Technology">
+        <span class="brand-line1">Jericho</span>
+        <span class="brand-line2">Technology</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Project Gallery</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a class="active" href="atlas.html">ATLAS</a></li>
+          <li><a href="graphite.html">Graphite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="atlas-page">
+    <section class="atlas-hero">
+      <div class="atlas-glow atlas-glow-one"></div>
+      <div class="atlas-glow atlas-glow-two"></div>
+
+      <div class="atlas-hero-content container">
+        <p class="atlas-kicker">Jericho Technology Program</p>
+
+        <h1>ATLAS</h1>
+
+        <p class="atlas-subtitle">
+          Applied Technology Learning and Support
+        </p>
+
+        <form class="atlas-search" action="#" method="get">
+          <label class="sr-only" for="atlasSearch">Search ATLAS</label>
+          <input
+            id="atlasSearch"
+            name="q"
+            type="search"
+            placeholder="Search for help with HTML, CSS, Arduino, engineering, or assignments..."
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <p class="atlas-note">
+          Ask about class projects, software tools, rubrics, engineering design, coding concepts, and technology coursework.
+        </p>
+      </div>
+    </section>
+
+    <section class="atlas-info container">
+      <div class="atlas-card">
+        <span class="atlas-card-icon">💻</span>
+        <h2>Code Help</h2>
+        <p>
+          Get support with HTML, CSS, JavaScript, Arduino code, debugging, and understanding programming concepts.
+        </p>
+      </div>
+
+      <div class="atlas-card">
+        <span class="atlas-card-icon">🛠️</span>
+        <h2>Project Support</h2>
+        <p>
+          Review assignment expectations, project requirements, rubrics, and next steps without having the work done for you.
+        </p>
+      </div>
+
+      <div class="atlas-card">
+        <span class="atlas-card-icon">⚙️</span>
+        <h2>Technology Guidance</h2>
+        <p>
+          Learn about engineering design, digital fabrication, robotics, circuits, 3D printing, and classroom technology tools.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jericho UFSD • Technology Department</small>
+    </div>
+  </footer>
+</body>
+</html>
