@@ -72,11 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const atlasInput = document.querySelector("#atlasInput");
   const chatWindow = document.querySelector("#chatWindow");
 
-  // Local testing backend:
-  const ATLAS_BACKEND_URL = "http://localhost:3000/chat";
-
-  // Later this becomes your deployed backend URL:
-  // const ATLAS_BACKEND_URL = "https://your-atlas-backend.onrender.com/chat";
+  // Render Server URL:
+  const ATLAS_BACKEND_URL = "https://atlas-chatbot-backend.onrender.com/chat";
 
   function addAtlasMessage(text, sender) {
     const message = document.createElement("div");
