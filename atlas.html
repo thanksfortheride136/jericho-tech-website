@@ -37,7 +37,7 @@
       <div class="atlas-glow atlas-glow-two"></div>
 
       <div class="atlas-hero-content container">
-        <p class="atlas-kicker">Jericho Technology Program</p>
+        <p class="atlas-kicker">Jericho Technology Program AI Assistant</p>
 
         <h1>ATLAS</h1>
 
@@ -45,17 +45,24 @@
           Applied Technology Learning and Support
         </p>
 
-        <form class="atlas-search" action="#" method="get">
-          <label class="sr-only" for="atlasSearch">Search ATLAS</label>
-          <input
-            id="atlasSearch"
-            name="q"
-            type="search"
-            placeholder="Search for help with HTML, CSS, Arduino, engineering, or assignments..."
-            autocomplete="off"
-          />
-          <button type="submit">Search</button>
-        </form>
+        <div class="atlas-chat-area">
+  <div class="atlas-chat-window" id="chatWindow">
+    <div class="atlas-message atlas-bot-message">
+      Hi, I am ATLAS. What do you need help with?
+    </div>
+  </div>
+
+  <form class="atlas-search atlas-chat-form" id="chatForm">
+    <label class="sr-only" for="atlasInput">Ask ATLAS</label>
+    <input
+      id="atlasInput"
+      type="text"
+      placeholder="Ask for help with HTML, CSS, Arduino, engineering, or assignments..."
+      autocomplete="off"
+    />
+    <button type="submit">Ask</button>
+  </form>
+</div>
 
         <p class="atlas-note">
           Ask about class projects, software tools, rubrics, engineering design, coding concepts, and technology coursework.
