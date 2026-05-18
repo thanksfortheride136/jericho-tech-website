@@ -385,7 +385,7 @@ main {
 
   margin-bottom: 1rem;
   padding: 1rem;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.8rem;
 
