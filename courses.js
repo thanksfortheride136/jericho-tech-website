@@ -80,10 +80,10 @@ const COURSES = [
   },
 
   { 
-    title: "Video Game Development", 
+    title: "Computational Research Support", 
     cat: ["comp", "high"], 
-    img: "pictures/unity.png",
-    text: "Design, build, play, and test your own video games from concept to completion."
+    img: "pictures/sciresearch.png",
+    text: "Science Research: programming, data analysis and machine learning support."
   },
 
   { 

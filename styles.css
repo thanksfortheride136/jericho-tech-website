@@ -1,12 +1,23 @@
 /* ============================
-   Theme
+   Jericho Theme
 ============================ */
 :root {
-  --navy: #13294B;
-  --purple: #5B2FB0;
-  --paper: #f8f9fb;
-  --ink: #0d0d10;
-  --muted: #6b7280;
+  --navy: #0b3768;
+  --navy-dark: #082d58;
+
+  --gold: #f4be2a;
+  --gold-dark: #b97800;
+  --gold-soft: #fff7df;
+
+  --paper: #f9f7f3;
+  --paper-cool: #f7f6fb;
+
+  --ink: #10233f;
+  --muted: #626a78;
+
+  --white: #ffffff;
+  --border-soft: rgba(11, 55, 104, 0.10);
+
   --shadow: 0 8px 28px rgba(17, 24, 39, 0.12);
 }
 
@@ -17,7 +28,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
   scroll-behavior: smooth;
 }
@@ -26,15 +38,20 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Inter,
+    Arial,
+    sans-serif;
   line-height: 1.6;
 
-  /* Sticky footer layout */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 
-  /* Allows page to scroll when ATLAS chat gets taller */
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -58,16 +75,20 @@ main {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.9);
+
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-bar {
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0.85rem clamp(16px, 4vw, 40px);
 }
 
@@ -79,43 +100,52 @@ main {
 }
 
 .brand-line1 {
-  font-weight: 800;
   color: var(--navy);
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .brand-line2 {
-  font-weight: 700;
-  color: var(--purple);
-  font-size: 0.95rem;
   margin-top: 2px;
+
+  color: var(--gold-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
-/* Nav links */
+/* Navigation links */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.2rem;
+
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .nav a {
-  text-decoration: none;
+  position: relative;
+
+  padding: 0.5rem 0;
+
   color: var(--navy);
   font-weight: 600;
-  padding: 0.5rem 0;
-  position: relative;
+  text-decoration: none;
 }
 
 .nav a::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: -2px;
-  height: 2px;
+
   width: 0;
-  background: var(--purple);
+  height: 2px;
+
+  background: var(--gold);
+
   transition: width 0.25s ease;
 }
 
@@ -126,16 +156,21 @@ main {
 }
 
 .nav a.active {
-  color: var(--purple);
+  color: var(--navy-dark);
 }
 
 /* Hamburger */
 .menu-toggle {
   display: none;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+
   padding: 0.35rem 0.55rem;
+
+  border: 1px solid rgba(11, 55, 104, 0.16);
+  border-radius: 8px;
+
+  background: var(--white);
+  color: var(--navy);
+
   cursor: pointer;
 }
 
@@ -149,13 +184,16 @@ main {
 }
 
 .video-frame {
-  width: 100vw;
-  aspect-ratio: 21 / 9;
-  background: #000;
-  overflow: hidden;
-  border-radius: 0;
-  max-height: 65vh;
   position: relative;
+
+  width: 100vw;
+  max-height: 65vh;
+  aspect-ratio: 21 / 9;
+
+  overflow: hidden;
+
+  border-radius: 0;
+  background: #000;
 }
 
 .video-frame video {
@@ -167,12 +205,22 @@ main {
 
 .video-frame::after {
   content: "";
+
   position: absolute;
   bottom: 0;
   left: 0;
+
   width: 100%;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.25), transparent);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.25),
+      transparent
+    );
+
   pointer-events: none;
 }
 
@@ -180,22 +228,26 @@ main {
    Intro Text
 ============================ */
 .intro {
-  padding: 3rem 0 2.2rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 3rem 0 2.2rem;
+
+  text-align: center;
 }
 
 .intro h1 {
   margin: 0 0 0.5rem;
+
   color: var(--navy);
   font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
 }
 
 .intro p {
-  margin: 0;
   max-width: 100ch;
+  margin: 0;
+
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -206,39 +258,54 @@ main {
 .action-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 1fr));
-  gap: 0.75rem;
-  margin-top: 0.9rem;
   align-items: stretch;
+  gap: 0.75rem;
+
+  margin-top: 0.9rem;
 }
 
 .action-row .btn {
   min-height: 64px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 0.9rem 1rem;
-  border: 1px solid rgba(19, 41, 75, 0.12);
+
+  border: 1px solid rgba(11, 55, 104, 0.14);
   border-radius: 14px;
-  background: #fff;
+
+  background: var(--white);
   color: var(--navy);
-  text-decoration: none;
+
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.06);
+
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  text-decoration: none;
 
   white-space: normal;
   word-break: keep-all;
   overflow-wrap: normal;
   hyphens: none;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
 }
 
 .action-row .btn:hover,
 .action-row .btn:focus {
   transform: translateY(-1px);
+
+  border-color: rgba(244, 190, 42, 0.75);
+  background: var(--gold-soft);
+
   box-shadow: 0 8px 18px rgba(17, 24, 39, 0.10);
-  border-color: rgba(91, 47, 176, 0.35);
 }
 
 /* ============================
@@ -246,68 +313,103 @@ main {
 ============================ */
 .atlas-page {
   background:
-    radial-gradient(circle at 20% 20%, rgba(91, 47, 176, 0.18), transparent 28%),
-    radial-gradient(circle at 80% 10%, rgba(19, 41, 75, 0.18), transparent 30%),
-    linear-gradient(135deg, #f8f9fb 0%, #eef1f8 48%, #f7f4ff 100%);
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(244, 190, 42, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(11, 55, 104, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      var(--paper) 0%,
+      #eef3f8 48%,
+      #fff8e6 100%
+    );
 
-  /* IMPORTANT FIX:
-     Do not hide vertical overflow.
-     The old overflow: hidden prevented the page from scrolling. */
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .atlas-hero {
+  position: relative;
+
   min-height: calc(100vh - 76px);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 
-  /* Slightly reduced so the chat/search area fits better on laptop screens */
   padding: clamp(2.5rem, 6vw, 5rem) 0 3rem;
 }
 
 .atlas-hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background-image:
-    linear-gradient(rgba(19, 41, 75, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(19, 41, 75, 0.055) 1px, transparent 1px);
+    linear-gradient(
+      rgba(11, 55, 104, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 55, 104, 0.055) 1px,
+      transparent 1px
+    );
+
   background-size: 44px 44px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 82%);
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      transparent 82%
+    );
+
   pointer-events: none;
 }
 
 .atlas-hero::after {
   content: "";
+
   position: absolute;
+
   width: min(760px, 85vw);
   height: min(760px, 85vw);
-  border: 1px solid rgba(91, 47, 176, 0.15);
+
+  border: 1px solid rgba(244, 190, 42, 0.18);
   border-radius: 999px;
+
   box-shadow:
-    0 0 0 70px rgba(91, 47, 176, 0.035),
-    0 0 0 140px rgba(19, 41, 75, 0.025);
+    0 0 0 70px rgba(244, 190, 42, 0.04),
+    0 0 0 140px rgba(11, 55, 104, 0.025);
+
   pointer-events: none;
 }
 
 .atlas-hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
+
+  width: min(1100px, 92vw);
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  /* Prevents content from stretching too awkwardly */
-  width: min(1100px, 92vw);
+  text-align: center;
 }
 
 .atlas-kicker {
   margin: 0 0 0.7rem;
-  color: var(--purple);
+
+  color: var(--gold-dark);
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -316,17 +418,20 @@ main {
 
 .atlas-hero h1 {
   margin: 0;
+
   color: var(--navy);
   font-size: clamp(4.3rem, 12vw, 10rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
+
   text-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8),
-    0 18px 45px rgba(19, 41, 75, 0.18);
+    0 18px 45px rgba(11, 55, 104, 0.18);
 }
 
 .atlas-subtitle {
   margin: 1.1rem 0 0;
+
   color: var(--ink);
   font-size: clamp(1.15rem, 2vw, 1.75rem);
   font-weight: 750;
@@ -336,26 +441,33 @@ main {
 /* Decorative glow blobs */
 .atlas-glow {
   position: absolute;
+
   border-radius: 999px;
+
   filter: blur(6px);
   opacity: 0.72;
+
   pointer-events: none;
 }
 
 .atlas-glow-one {
-  width: 280px;
-  height: 280px;
   top: 18%;
   left: 9%;
-  background: rgba(91, 47, 176, 0.16);
+
+  width: 280px;
+  height: 280px;
+
+  background: rgba(244, 190, 42, 0.16);
 }
 
 .atlas-glow-two {
-  width: 340px;
-  height: 340px;
   right: 8%;
   bottom: 12%;
-  background: rgba(19, 41, 75, 0.12);
+
+  width: 340px;
+  height: 340px;
+
+  background: rgba(11, 55, 104, 0.12);
 }
 
 /* ============================
@@ -363,44 +475,41 @@ main {
 ============================ */
 .atlas-chat-area {
   width: min(880px, 100%);
-  margin-top: 2.2rem;
+  min-height: 0;
 
-  /* IMPORTANT FIX:
-     Makes the chat window and search bar behave as one controlled layout. */
   display: flex;
   flex-direction: column;
-  min-height: 0;
+
+  margin-top: 2.2rem;
 }
 
-/* Chat window stays hidden until JS adds .has-messages */
 .atlas-chat-window {
   width: 100%;
 
-  /* IMPORTANT FIX:
-     Gives the message area a controlled height.
-     Messages scroll inside this box instead of pushing the search bar away. */
   height: clamp(220px, 35vh, 360px);
   max-height: 360px;
   min-height: 0;
 
-  margin-bottom: 1rem;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 
-  overflow-y: auto;
-  overflow-x: hidden;
+  margin-bottom: 1rem;
+  padding: 1rem;
 
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(19, 41, 75, 0.1);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  border: 1px solid rgba(11, 55, 104, 0.10);
   border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.76);
+
   box-shadow:
     0 18px 60px rgba(17, 24, 39, 0.11),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(16px);
 
-  /* Keeps scrolling smooth on mobile */
+  backdrop-filter: blur(16px);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -408,7 +517,6 @@ main {
   display: flex;
 }
 
-/* Optional: makes scrollbar less ugly */
 .atlas-chat-window::-webkit-scrollbar {
   width: 10px;
 }
@@ -418,104 +526,133 @@ main {
 }
 
 .atlas-chat-window::-webkit-scrollbar-thumb {
-  background: rgba(19, 41, 75, 0.18);
   border-radius: 999px;
+  background: rgba(11, 55, 104, 0.18);
 }
 
 .atlas-chat-window::-webkit-scrollbar-thumb:hover {
-  background: rgba(19, 41, 75, 0.28);
+  background: rgba(11, 55, 104, 0.28);
 }
 
 .atlas-message {
   max-width: 82%;
+
   padding: 0.85rem 1rem;
+
   border-radius: 18px;
+
   font-size: 1rem;
   line-height: 1.45;
   text-align: left;
 
-  /* Prevents long text from breaking the layout */
   overflow-wrap: anywhere;
 }
 
 .atlas-bot-message {
   align-self: flex-start;
-  background: #ececf1;
-  color: var(--ink);
+
   border-bottom-left-radius: 6px;
+
+  background: #eef2f6;
+  color: var(--ink);
 }
 
 .atlas-user-message {
   align-self: flex-end;
-  background: rgba(91, 47, 176, 0.14);
-  color: var(--navy);
+
+  border: 1px solid rgba(244, 190, 42, 0.30);
   border-bottom-right-radius: 6px;
+
+  background: var(--gold-soft);
+  color: var(--navy);
 }
 
-/* This keeps the original search bar look */
+/* Search bar */
 .atlas-search {
   width: 100%;
-  padding: 0.55rem;
+
   display: flex;
+  flex-shrink: 0;
   gap: 0.55rem;
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(19, 41, 75, 0.11);
+
+  padding: 0.55rem;
+
+  border: 1px solid rgba(11, 55, 104, 0.11);
   border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.80);
+
   box-shadow:
     0 18px 60px rgba(17, 24, 39, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(16px);
 
-  /* IMPORTANT FIX:
-     The search bar should never shrink away or get pushed oddly. */
-  flex-shrink: 0;
+  backdrop-filter: blur(16px);
 }
 
 .atlas-search input {
   flex: 1;
   min-width: 0;
+
+  padding: 0.95rem 1.1rem;
+
   border: 0;
   outline: 0;
+
   background: transparent;
   color: var(--ink);
+
   font: inherit;
   font-size: 1rem;
-  padding: 0.95rem 1.1rem;
 }
 
 .atlas-search input::placeholder {
-  color: rgba(107, 114, 128, 0.9);
+  color: rgba(98, 106, 120, 0.90);
 }
 
 .atlas-search button {
-  border: 0;
+  flex-shrink: 0;
+
+  padding: 0.95rem 1.45rem;
+
+  border: 2px solid var(--navy);
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--navy), var(--purple));
-  color: #fff;
+
+  background: var(--navy);
+  color: var(--white);
+
+  box-shadow: 0 10px 24px rgba(11, 55, 104, 0.24);
+
   font: inherit;
   font-weight: 800;
-  padding: 0.95rem 1.45rem;
-  cursor: pointer;
-  box-shadow: 0 10px 24px rgba(91, 47, 176, 0.28);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
 
-  flex-shrink: 0;
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .atlas-search button:hover,
 .atlas-search button:focus {
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(91, 47, 176, 0.34);
+
+  border-color: var(--gold);
+  background: var(--navy-dark);
+
+  box-shadow: 0 14px 30px rgba(11, 55, 104, 0.30);
 }
 
 .atlas-chat-form {
-  margin-top: 0;
   flex-shrink: 0;
+  margin-top: 0;
 }
 
 .atlas-note {
-  margin: 1rem 0 0;
   max-width: 70ch;
+  margin: 1rem 0 0;
+
   color: var(--muted);
   font-size: 1rem;
 }
@@ -524,43 +661,62 @@ main {
    ATLAS Info Cards
 ============================ */
 .atlas-info {
+  position: relative;
+  z-index: 3;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.15rem;
+
   padding: 0 0 4rem;
-  position: relative;
-  z-index: 3;
 }
 
 .atlas-card {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(19, 41, 75, 0.09);
-  border-radius: 24px;
   padding: 1.5rem;
+
+  border: 1px solid rgba(11, 55, 104, 0.10);
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.84);
+
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .atlas-card:hover {
   transform: translateY(-4px);
+
+  border-color: rgba(244, 190, 42, 0.55);
+
   box-shadow: 0 18px 36px rgba(17, 24, 39, 0.14);
-  border-color: rgba(91, 47, 176, 0.25);
 }
 
 .atlas-card-icon {
   width: 48px;
   height: 48px;
+
   display: grid;
   place-items: center;
+
   margin-bottom: 1rem;
+
+  border: 1px solid rgba(244, 190, 42, 0.25);
   border-radius: 16px;
-  background: rgba(91, 47, 176, 0.1);
+
+  background: var(--gold-soft);
+  color: var(--navy);
+
   font-size: 1.35rem;
 }
 
 .atlas-card h2 {
   margin: 0 0 0.45rem;
+
   color: var(--navy);
   font-size: 1.2rem;
 }
@@ -575,29 +731,41 @@ main {
 ============================ */
 .sr-only {
   position: absolute;
+
   width: 1px;
   height: 1px;
+
   padding: 0;
   overflow: hidden;
+
   clip: rect(0, 0, 0, 0);
+
   white-space: nowrap;
+
   border: 0;
 }
 
 .card-link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 /* ============================
    Footer
 ============================ */
 .site-footer {
-  background: #e6e6e6;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  color: var(--muted);
-  text-align: center;
   padding: 1rem 0 2rem;
+
+  border-top: 4px solid var(--gold);
+
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.84);
+
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--white);
 }
 
 /* ============================
@@ -611,11 +779,15 @@ main {
   .nav-links {
     position: absolute;
     inset: calc(56px + 8px) 0 auto 0;
-    background: #fff;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+
     display: none;
     flex-direction: column;
+
     padding: 0.6rem;
+
+    border-top: 1px solid rgba(11, 55, 104, 0.08);
+
+    background: var(--white);
   }
 
   .nav-links.open {
@@ -627,8 +799,8 @@ main {
   }
 
   .video-frame {
-    aspect-ratio: 16 / 9;
     max-height: none;
+    aspect-ratio: 16 / 9;
   }
 
   .video-frame::after {
@@ -681,13 +853,15 @@ main {
 
   .atlas-search {
     flex-direction: column;
-    border-radius: 24px;
+
     padding: 0.7rem;
+
+    border-radius: 24px;
   }
 
   .atlas-search input {
-    text-align: center;
     padding: 0.85rem 0.9rem;
+    text-align: center;
   }
 
   .atlas-search button {
@@ -698,6 +872,7 @@ main {
   .atlas-chat-window {
     height: clamp(200px, 40vh, 320px);
     max-height: 320px;
+
     border-radius: 24px;
   }
 
