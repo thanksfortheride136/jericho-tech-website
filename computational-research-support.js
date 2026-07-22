@@ -94,10 +94,12 @@ pathwayCards.forEach((card) => {
 // ======================================================
 // PLACEHOLDER RESOURCE LINKS
 // Prevent unfinished links from jumping to the page top.
-// Remove the placeholder-link class after adding a URL.
+// Links with "_FILE_ID" become active once the placeholder is replaced.
 // ======================================================
 
-const placeholderLinks = document.querySelectorAll(".placeholder-link");
+const placeholderLinks = document.querySelectorAll(
+  ".placeholder-link, a[href*='_FILE_ID']"
+);
 
 placeholderLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
