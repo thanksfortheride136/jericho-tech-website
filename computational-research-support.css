@@ -498,6 +498,7 @@ body.pathways-page {
 }
 
 .python-lesson {
+  min-width: 0;
   padding: 0.7rem;
 
   border: 1px solid #d8deea;
@@ -507,12 +508,22 @@ body.pathways-page {
 }
 
 .python-lesson-heading {
+  width: 100%;
+  min-width: 0;
+
   display: flex;
   flex-direction: column;
   gap: 0.14rem;
 }
 
+.python-lesson-heading > div {
+  width: 100%;
+  min-width: 0;
+}
+
 .lesson-label {
+  display: block;
+  width: 100%;
   margin: 0;
 
   color: var(--jericho-gold-dark);
@@ -520,22 +531,33 @@ body.pathways-page {
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .python-lesson h3 {
+  width: 100%;
+  max-width: none;
   margin: 0;
 
   color: var(--jericho-navy-dark);
   font-size: 0.84rem;
   line-height: 1.25;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .python-lesson .lesson-description {
+  width: 100%;
+  max-width: none;
   margin: 0.46rem 0 0.55rem;
 
   color: #4c5667;
   font-size: 0.7rem;
   line-height: 1.45;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .python-lesson code {
