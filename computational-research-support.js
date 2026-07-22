@@ -1,5 +1,6 @@
 "use strict";
 
+
 // ======================================================
 // FOOTER YEAR
 // ======================================================
@@ -87,6 +88,26 @@ pathwayCards.forEach((card) => {
       }
     });
   });
+});
+
+
+// ======================================================
+// PLACEHOLDER RESOURCE LINKS
+// Prevent unfinished links from jumping to the page top.
+// Remove the placeholder-link class after adding a URL.
+// ======================================================
+
+const placeholderLinks = document.querySelectorAll(".placeholder-link");
+
+placeholderLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+
+  link.setAttribute(
+    "aria-label",
+    `${link.textContent.trim()} - link coming soon`
+  );
 });
 
 
