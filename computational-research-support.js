@@ -82,7 +82,7 @@ pathwayCards.forEach((card) => {
         window.requestAnimationFrame(() => {
           step.scrollIntoView({
             behavior: "smooth",
-            block: "nearest"
+            block: "start"
           });
         });
       }
