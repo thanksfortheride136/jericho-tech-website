@@ -236,6 +236,24 @@ body.pathways-page {
   text-wrap: balance;
 }
 
+@media (min-width: 821px) {
+  .pathways-grid > .pathway-card:last-child .pathway-card-header h2 {
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1681px) {
+  .pathways-grid > .pathway-card:last-child .pathway-card-header {
+    padding-inline: 0.85rem;
+  }
+
+  .pathways-grid > .pathway-card:last-child .pathway-card-header h2 {
+    font-size: clamp(1.25rem, 1.15vw, 1.45rem);
+    letter-spacing: 0;
+  }
+}
+
 /* ======================================================
    CARD BODY
 ====================================================== */
