@@ -1045,6 +1045,11 @@ body.pathways-page {
     letter-spacing: 0;
   }
 
+  .pathways-grid > .pathway-card:last-child .pathway-card-header h2 {
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+
   .pathway-card-body {
     padding: 0.85rem;
   }
@@ -1311,6 +1316,11 @@ body.pathways-page {
   .pathway-card:not(.pre-track) .pathway-card-header h2 {
     font-size: clamp(1.15rem, 1.35vw, 1.35rem);
     letter-spacing: 0;
+  }
+
+  .pathways-grid > .pathway-card:last-child .pathway-card-header h2 {
+    white-space: nowrap;
+    text-wrap: nowrap;
   }
 
   .pathway-card:not(.pre-track) .track-description {
