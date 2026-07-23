@@ -989,6 +989,409 @@ body.pathways-page {
   }
 }
 
+@media (min-width: 1420px) and (max-width: 1680px) {
+  .pathways-container {
+    width: min(1570px, calc(100% - 24px));
+  }
+
+  .pathways-header {
+    padding-top: 2.3rem;
+    padding-bottom: 1.9rem;
+  }
+
+  .title-layout {
+    gap: 1.15rem;
+  }
+
+  .title-mark {
+    width: 82px;
+    height: 82px;
+  }
+
+  .pathways-header h1 {
+    font-size: clamp(2.7rem, 3.7vw, 3.65rem);
+    letter-spacing: 0;
+  }
+
+  .page-lede {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .pathways-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .pathway-card {
+    border-radius: 16px;
+  }
+
+  .pathway-card-header {
+    min-height: 102px;
+    padding: 1rem 1.05rem;
+  }
+
+  .track-label {
+    margin-bottom: 0.45rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .pathway-card-header h2 {
+    min-height: 2.7rem;
+    font-size: clamp(1.08rem, 1.08vw, 1.22rem);
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  .pathway-card-body {
+    padding: 0.85rem;
+  }
+
+  .track-description {
+    min-height: 76px;
+    padding-inline: 0.15rem;
+    font-size: 0.78rem;
+    line-height: 1.42;
+  }
+
+  .tools-box {
+    min-height: 74px;
+    margin-bottom: 0.7rem;
+    padding: 0.65rem 0.7rem;
+    border-radius: 9px;
+  }
+
+  .tools-box strong {
+    font-size: 0.72rem;
+  }
+
+  .tools-box span {
+    font-size: 0.69rem;
+    line-height: 1.3;
+  }
+
+  .pathway-steps {
+    gap: 0.48rem;
+  }
+
+  .step-item summary {
+    grid-template-columns: 26px minmax(0, 1fr) 16px;
+    gap: 0.5rem;
+    min-height: 46px;
+    padding: 0.46rem 0.52rem;
+    border-radius: 8px;
+    font-size: 0.74rem;
+  }
+
+  .step-number {
+    width: 26px;
+    height: 26px;
+    font-size: 0.72rem;
+  }
+
+  .step-content {
+    padding:
+      0.1rem
+      0.55rem
+      0.7rem
+      calc(0.52rem + 26px + 0.5rem);
+  }
+
+  .python-course-content {
+    padding: 0.55rem 0.45rem 0.7rem;
+  }
+
+  .course-introduction {
+    padding: 0.52rem;
+    border-radius: 8px;
+  }
+
+  .course-introduction p {
+    font-size: 0.68rem;
+  }
+
+  .python-lesson-list {
+    max-height: min(375px, 52vh);
+  }
+
+  .python-lesson {
+    padding: 0.56rem;
+    border-radius: 8px;
+  }
+
+  .lesson-label {
+    font-size: 0.54rem;
+  }
+
+  .python-lesson h3 {
+    font-size: 0.74rem;
+    line-height: 1.22;
+  }
+
+  .python-lesson .lesson-description {
+    margin-top: 0.4rem;
+    margin-bottom: 0.45rem;
+    font-size: 0.63rem;
+  }
+
+  .lesson-resources {
+    gap: 0.28rem;
+  }
+
+  .lesson-resource {
+    min-height: 36px;
+    padding: 0.44rem 0.25rem;
+    border-radius: 7px;
+    font-size: 0.6rem;
+  }
+
+  .python-mini-project {
+    margin-top: 0.75rem;
+    padding: 0.72rem;
+    border-radius: 10px;
+  }
+
+  .python-mini-project h3 {
+    font-size: 0.86rem;
+  }
+
+  .python-mini-project p {
+    font-size: 0.67rem;
+  }
+
+  .mini-project-link {
+    min-height: 38px;
+    font-size: 0.62rem;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1419px) {
+  .pathways-container {
+    width: min(1240px, calc(100% - 32px));
+  }
+
+  .pathways-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px;
+  }
+
+  .pathway-card.pre-track {
+    grid-column: 1 / -1;
+  }
+
+  .pathway-card.pre-track .pathway-card-header {
+    min-height: 98px;
+  }
+
+  .pathway-card.pre-track .pathway-card-body {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.45fr);
+    align-items: start;
+    gap: 1rem 1.15rem;
+  }
+
+  .pre-track-overview {
+    grid-column: 1;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border: 1px solid #d8deea;
+    border-left: 4px solid var(--jericho-gold);
+    border-radius: 12px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(237, 242, 250, 0.92),
+        rgba(255, 255, 255, 0.72)
+      );
+  }
+
+  .pathway-card.pre-track .track-description {
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.92rem;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .pathway-card.pre-track .tools-box {
+    min-height: auto;
+    margin: 0;
+    padding: 0.9rem 0 0;
+
+    border: 0;
+    border-top: 1px solid rgba(11, 55, 104, 0.14);
+    border-radius: 0;
+
+    background: transparent;
+  }
+
+  .pathway-card.pre-track .pathway-steps {
+    grid-column: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    align-items: start;
+    gap: 0.55rem;
+  }
+
+  .pathway-card.pre-track .step-item {
+    align-self: start;
+  }
+
+  .pathway-card.pre-track .step-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .pathway-card.pre-track .step-item[open] {
+    grid-column: 1 / -1;
+  }
+
+  .pathway-card.pre-track .step-item[open] summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .pathway-card.pre-track .step-item summary {
+    min-height: 54px;
+    padding: 0.52rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .pathway-card.pre-track .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.78rem;
+  }
+
+  .pathway-card.pre-track .step-content {
+    padding:
+      0.1rem
+      0.65rem
+      0.75rem
+      calc(0.7rem + 30px + 0.65rem);
+  }
+
+  .pathway-card.pre-track .python-course-content {
+    padding: 0.7rem;
+  }
+
+  .pathway-card.pre-track .python-lesson-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: min(310px, 42vh);
+    padding-right: 0.2rem;
+  }
+
+  .pathway-card.pre-track .python-mini-project {
+    margin-top: 0.7rem;
+  }
+
+  .pathway-card:not(.pre-track) .pathway-card-header {
+    min-height: 104px;
+    padding: 1rem 1.05rem;
+  }
+
+  .pathway-card:not(.pre-track) .pathway-card-body {
+    padding: 0.9rem;
+  }
+
+  .pathway-card:not(.pre-track) .pathway-card-header h2 {
+    font-size: clamp(1.15rem, 1.35vw, 1.35rem);
+    letter-spacing: 0;
+  }
+
+  .pathway-card:not(.pre-track) .track-description {
+    min-height: 86px;
+    font-size: 0.82rem;
+  }
+
+  .pathway-card:not(.pre-track) .tools-box {
+    min-height: 78px;
+  }
+
+  .pathway-card:not(.pre-track) .step-item summary {
+    grid-template-columns: 28px minmax(0, 1fr) 18px;
+    gap: 0.55rem;
+    min-height: 48px;
+    padding: 0.5rem 0.55rem;
+    font-size: 0.76rem;
+  }
+
+  .pathway-card:not(.pre-track) .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.74rem;
+  }
+}
+
+@supports selector(.pathway-card:has(.step-item[open])) {
+  @media (min-width: 1100px) and (max-width: 1419px) {
+    .pathway-card.pre-track:has(.step-item[open]) .pathway-card-body {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .pre-track-overview {
+      grid-column: 1;
+
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      align-items: start;
+      gap: 0.9rem;
+
+      padding: 0.8rem 0.95rem;
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .track-description {
+      font-size: 0.82rem;
+      line-height: 1.38;
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .tools-box {
+      padding: 0 0 0 0.9rem;
+      border-top: 0;
+      border-left: 1px solid rgba(11, 55, 104, 0.14);
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .pathway-steps {
+      grid-column: 1;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .step-item[open] {
+      grid-column: 1 / -1;
+    }
+
+    .pathway-card.pre-track:has(.step-item[open]) .python-lesson-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-height: min(360px, 44vh);
+    }
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1099px) {
+  .pathways-container {
+    width: min(760px, calc(100% - 32px));
+  }
+
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1100px) {
   .sequence-list {
     grid-template-columns: repeat(5, minmax(0, 1fr));
